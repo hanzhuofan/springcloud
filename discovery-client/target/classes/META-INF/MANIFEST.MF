@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Implementation-Title: discovery-client
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: Administrator
+Implementation-Vendor-Id: com.hzf
+Build-Jdk: 1.8.0_171
+Implementation-URL: http://maven.apache.org/discovery-client
+Created-By: Maven Integration for Eclipse
+

@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: service-user #服务名称
+server:
+  port: 8802 #启动端口号
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    register-with-eureka: true #是否注册到eureka服务器
+    fetch-registry: true #是否可检索
+    service-url:
+      defaultZone: http://localhost:8761/eureka/ #服务中心
+
+logging:
+  level:
+    com.netflix.eureka: OFF
+    com.netflix.discovery: OFF
