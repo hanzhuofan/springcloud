@@ -9,6 +9,11 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+/**
+ * /listUsers 模拟从数据库查询
+ * @author 韩卓帆
+ * @date 2018年9月5日 下午1:19:44
+ */
 @RestController
 public class UserManagementController {
 

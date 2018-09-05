@@ -6,7 +6,8 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 /**
  * 获取用户信息 的服务提供者
- *
+ * @author 韩卓帆
+ * @date 2018年9月5日 下午1:20:06
  */
 @SpringBootApplication
 @EnableDiscoveryClient

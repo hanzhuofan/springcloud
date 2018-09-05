@@ -18,7 +18,7 @@ hystrix: #hystrix配置
             timeoutInMilliseconds: 2500 
 ribbon: #ribbon负载均衡参数配置
   ReadTimeout: 5000
-  ConnectTimeout: 5000s
+  ConnectTimeout: 5000
 eureka:
   client:
     serviceUrl:

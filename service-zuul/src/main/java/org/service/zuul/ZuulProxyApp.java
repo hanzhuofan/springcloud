@@ -7,7 +7,8 @@ import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 
 /**
  * 路由网关zuul
- *
+ * @author 韩卓帆
+ * @date 2018年9月5日 下午1:11:43
  */
 @SpringBootApplication
 @EnableEurekaClient

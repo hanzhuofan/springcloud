@@ -10,8 +10,13 @@ import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+/**
+ * /listUsers 模拟从数据库查询
+ * @author 韩卓帆
+ * @date 2018年9月5日 下午1:21:38
+ */
 @RestController
-@RefreshScope
+@RefreshScope//自动更新配置
 public class UserManagementController {
 
 	@Value("${server.port}")

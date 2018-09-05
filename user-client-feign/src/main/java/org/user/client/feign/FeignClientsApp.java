@@ -7,7 +7,8 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 
 /**
  * 服务消费者 feign
- *
+ * @author 韩卓帆
+ * @date 2018年9月5日 下午1:23:37
  */
 @SpringBootApplication
 @EnableEurekaClient
