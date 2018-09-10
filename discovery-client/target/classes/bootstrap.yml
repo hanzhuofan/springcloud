@@ -1,6 +1,47 @@
 spring:
   application:
     name: service-user #服务名称
+  cloud:
+    stream:
+      kafka: 
+        binder:
+          brokers: localhost:9092
+          zk-nodes: localhost:2181
+          minPartitionCount: 1
+          autoCreateTopics: true
+          autoAddPartitions: false
+        bindings: 
+          eureka-client1:
+            producer:
+              configuration:
+                request:
+                  timeout:
+                    ms: 30000
+                linger:
+                  ms: 5
+                batch:
+                  size: 16384
+          eureka-client2:
+            producer:
+              configuration:
+                request:
+                  timeout:
+                    ms: 30000
+                linger:
+                  ms: 5
+                batch:
+                  size: 16384
+      bindings: 
+        eureka-client1:
+          group: g1
+          destination: dest1#输出通道的主题名则为dest1
+          contentType: application/json
+          producer: 
+            partitionKeyExpression: payload
+            partitionCount: 2
+        eureka-client2:
+          group: g2
+          destination: dest2
 server:
   port: 8802 #启动端口号
 eureka:
@@ -11,7 +52,6 @@ eureka:
     fetch-registry: true #是否可检索
     service-url:
       defaultZone: http://localhost:8761/eureka/ #服务中心
-
 logging:
   level:
     com.netflix.eureka: OFF
