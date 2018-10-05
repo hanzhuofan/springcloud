@@ -11,7 +11,7 @@ public class ThreadTest2 extends Thread {
 	}
 
 	public static void main(String[] args) throws Exception {
-		String lock = new String("lock");
+		String lock = new String("myLock");
 		for (int i = 1; i < 10; i++) {
 			new ThreadTest2(i, lock).start();
 			Thread.sleep(1);

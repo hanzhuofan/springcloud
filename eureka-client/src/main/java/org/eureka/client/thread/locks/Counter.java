@@ -18,13 +18,13 @@ public class Counter {
 	/**
 	 * 用Lock代替synchronized达到了同样的目的
 	 */
-	private Lock lock = new Lock();
+	private MyLock myLock = new MyLock();
 	private int count = 0;
 
 	public int inc() throws InterruptedException {
-		lock.lock();
+		myLock.lock();
 		int newCount = ++count;
-		lock.unlock();
+		myLock.unlock();
 		return newCount;
 	}
 

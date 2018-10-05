@@ -2,18 +2,18 @@ package org.eureka.client.thread.locks;
 
 public class Reentrant2 {
 
-	Lock lock = new Lock();
+	MyLock myLock = new MyLock();
 	java.util.concurrent.locks.Lock locks;
 
 	public void outer() throws InterruptedException{
-		lock.lock();
+		myLock.lock();
 		inner();
-		lock.unlock();
+		myLock.unlock();
 	}
 
 	public synchronized void inner() throws InterruptedException{
-		lock.lock();
+		myLock.lock();
 		//do something
-		lock.unlock();
+		myLock.unlock();
 	}
 }
